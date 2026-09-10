@@ -1,0 +1,7 @@
+state,phase,magnitude_A,angle_deg,angle_status,provenance
+healthy_reference,A,0.7473,260.0,local_reference,"Magnitude reported in US Patent 10,802,084; angle assigned from reported healthy relative angles using local reference angle(A)=260 deg."
+healthy_reference,B,0.48452,166.1,derived_relative,"Magnitude reported in US Patent 10,802,084; angle derived from reported healthy relative angles."
+healthy_reference,C,0.7920,62.9,derived_relative,"Magnitude reported in US Patent 10,802,084; angle derived from reported healthy relative angles."
+measured_C_open,A,1.4124,250.0,local_reference,"Magnitude reported in US Patent 10,802,084; local absolute orientation chosen only for presentation because common rotation is removed by the residual."
+measured_C_open,B,0.9856,206.6,derived_relative,"Magnitude reported in US Patent 10,802,084; angle follows the reported Phase-A-to-Phase-B separation of 43.4 deg."
+measured_C_open,C,0.08174,,unknown,"Magnitude reported in US Patent 10,802,084; relative angle was not reliably determined in the public source and is treated as unknown."
