@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated research paper and the archived software release."
+title: "Open-Phase Transformer Detection: Reproducibility Software"
+type: software
+authors:
+  - family-names: "Dunbar"
+    given-names: "Thomas"
+repository-code: "https://github.com/tomdunbar/open-phase-transformer-detection"
+license: MIT
