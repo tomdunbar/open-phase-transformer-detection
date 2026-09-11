@@ -1,12 +1,4 @@
-# Associated documents
-
-This repository is the companion software and numerical-input repository for the following manuscript:
-
-**Tom Dunbar, _Model-Informed Phasor-Signature Matching for Detection and Classification of Open-Phase Conditions on Unloaded Transformers_, Rev 0.**
-
-Rev 0 is frozen for peer review. The manuscript is a standalone scholarly work and is **not** maintained as a file in this repository. A public preprint or publication link will be added here when one becomes available.
-
-## Related scholarly documents
+# Related scholarly documents
 
 The broader open-phase project also includes separate supporting documents:
 
