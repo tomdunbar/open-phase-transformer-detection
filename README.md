@@ -4,7 +4,7 @@ Companion software, numerical inputs, and reference material for the manuscript:
 
 **Tom Dunbar, _Model-Informed Phasor-Signature Matching for Detection and Classification of Open-Phase Conditions on Unloaded Transformers_, Rev 0.**
 
-Rev 0 is frozen for peer review. The manuscript stands on its own; this repository provides the code and numerical inputs used to calculate the published field-test example and the finite-\(r\) sensitivity analysis noted in the paper.
+Rev 0 is frozen for peer review. The manuscript stands on its own; this repository contains the code and numerical inputs used to calculate the field-test example and finite-$r$ sensitivity analysis noted in the paper.
 
 The manuscript itself is not maintained in this repository. A public preprint or publication link will be added here when available.
 
@@ -12,26 +12,26 @@ The manuscript itself is not maintained in this repository. A public preprint or
 
 | Path | Contents |
 |---|---|
-| [`src/`](src/) | Reusable numerical functions for the open-phase hypothesis operators and phase-aligned residual calculations. |
-| [`examples/`](examples/) | Executable reproductions of the Rev 0 field-test example and finite-\(r\) sensitivity analysis. |
+| [`src/`](src/) | Reusable numerical functions for the open-phase hypothesis operators and common-rotation-invariant residual calculations. |
+| [`examples/`](examples/) | Executable Rev 0 field-test and finite-$r$ sensitivity calculations. |
 | [`data/`](data/) | Numerical inputs for the field-test example, with provenance notes. |
 | [`references/`](references/) | Rev 0 reference list, source links, and redistributable reference PDFs. |
-| [`docs/`](docs/) | Links and notes for associated scholarly documents. |
-| [`requirements.txt`](requirements.txt) | Python package requirements. |
+| [`docs/`](docs/) | Notes on the associated manuscript and related scholarly documents. |
+| [`requirements.txt`](requirements.txt) | Python runtime dependency information. |
 | [`CITATION.cff`](CITATION.cff) | Citation metadata for this software repository. |
 | [`LICENSE`](LICENSE) | MIT License for the repository software. |
 
 ## Reproducing the Rev 0 calculations
 
-The examples are intended to stay close to the equations and numerical values in the manuscript rather than form a general protection-software package.
+The examples are intentionally kept close to the equations and numerical values in the manuscript rather than developed as a general protection-software package.
 
-From the repository root, create an environment if desired and install the required packages:
+From the repository root, create a virtual environment if desired:
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the environment, then run:
+Activate the environment, then install the required package(s):
 
 ```bash
 pip install -r requirements.txt
@@ -46,7 +46,7 @@ python examples/field_test_example.py
 This script:
 
 - loads the healthy and measured field-test phasors from `data/field_test_phasors.csv`;
-- constructs the parameter-free large-\(|r|\) hypothesis bank using \(q=-1\);
+- constructs the parameter-free large-$|r|$ hypothesis bank using $q=-1$;
 - predicts the healthy and Phase-A-, Phase-B-, and Phase-C-open current vectors;
 - removes arbitrary common phasor rotation using the closed-form minimal residual;
 - treats the measured Phase-C angle as unknown; and
@@ -61,25 +61,25 @@ The Rev 0 minimum residuals are:
 | Phase B open | 1.447 |
 | Phase C open | 0.178 |
 
-The Phase-C-open hypothesis is therefore the best match, with a minimum margin of approximately **1.025 A** to the closest competing hypothesis.
+The Phase-C-open hypothesis is the best match, with a minimum margin of approximately **1.025 A** to the closest competing hypothesis.
 
-The script contains assertions against the manuscript values and reports `PASS` when they are reproduced.
+The script contains assertions against the Rev 0 values and reports `PASS` when they are reproduced.
 
-### Finite-\(r\) sensitivity analysis
+### Finite-$r$ sensitivity analysis
 
 ```bash
 python examples/finite_r_sensitivity.py
 ```
 
-This script keeps the measured field-test current fixed while replacing the large-\(|r|\) approximation with finite positive-real values of \(r\). For each case it uses
+This script keeps the measured field-test current fixed while replacing the large-$|r|$ approximation with selected finite positive-real values of $r$. For each case it uses
 
-\[
+$$
 q(r)=\frac{1-r}{r+2}
-\]
+$$
 
 to reconstruct the hypothesis bank and recompute the residuals.
 
-The calculation is a sensitivity check on the large-\(|r|\) approximation used in Rev 0. It is **not** an independent validation of the transformer model.
+The calculation is a sensitivity check on the large-$|r|$ approximation used in Rev 0. It is **not** an independent validation of the transformer model.
 
 See [`examples/README.md`](examples/README.md) for additional details.
 
