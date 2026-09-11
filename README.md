@@ -16,7 +16,7 @@ The manuscript itself is not maintained in this repository. A public preprint or
 | [`examples/`](examples/) | Executable Rev 0 field-test and finite-$r$ sensitivity calculations. |
 | [`data/`](data/) | Numerical inputs for the field-test example, with provenance notes. |
 | [`references/`](references/) | Rev 0 reference list, source links, and redistributable reference PDFs. |
-| [`docs/`](docs/) | Notes on the associated manuscript and related scholarly documents. |
+| [`docs/`](docs/) | Related scholarly documents. |
 | [`requirements.txt`](requirements.txt) | Python runtime dependency information. |
 | [`CITATION.cff`](CITATION.cff) | Citation metadata for this software repository. |
 | [`LICENSE`](LICENSE) | MIT License for the repository software. |
