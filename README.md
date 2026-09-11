@@ -25,17 +25,7 @@ The manuscript itself is not maintained in this repository. A public preprint or
 
 The examples are intentionally kept close to the equations and numerical values in the manuscript rather than developed as a general protection-software package.
 
-From the repository root, create a virtual environment if desired:
-
-```bash
-python -m venv .venv
-```
-
-Activate the environment, then install the required package(s):
-
-```bash
-pip install -r requirements.txt
-```
+numpy is required to run the scripts.
 
 ### Field-test proof of concept
 
