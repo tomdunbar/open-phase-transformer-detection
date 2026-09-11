@@ -1,81 +1,27 @@
-# Reference archive for manuscript version 1.0
+# Reference archive for manuscript Rev 0
 
-## Licensing / repository treatment
+This directory contains the reference list for **Rev 0** of *Model-Informed Phasor-Signature Matching for Detection and Classification of Open-Phase Conditions on Unloaded Transformers*.
 
-The repository license does **not** relicense third-party references. A document being freely downloadable does not necessarily mean it may be republished in a public GitHub repository. Where redistribution rights are unclear, this folder contains a `.url` shortcut and the README links to the legitimate source.
+The repository license does **not** relicense third-party references. A document being freely downloadable does not necessarily mean it may be redistributed in a public GitHub repository. Where redistribution rights are unclear, the table below links to the legitimate source rather than storing a local copy.
 
-| Ref. | Title | Treatment | Reason |
-|---:|---|---|---|
-| 1 | [Design Vulnerability in Electric Power System](https://www.nrc.gov/docs/ML1204/ML120480170.pdf) | **PDF may be committed** | NRC U.S. Government work; retain source credit. |
-| 2 | [Methods for Analyzing and Detecting an Open Phase Condition of a Power Circuit to a Nuclear Plant Station Service or Startup Transformer](https://www.pes-psrc.org/kb/report/023.pdf) | **Link only** | Full PDF is publicly accessible, but no explicit redistribution license was located. |
-| 3 | [Open-Phase Detection for Station Auxiliary Transformers](https://wprcarchives.org/wp-content/uploads/2024/04/Elkader_Ahmed_Open-Phase-Detection-for-Station-Auxiliary-Transformers_20181016.pdf) | **Link only** | Public WPRC PDF; no explicit redistribution license located. See citation-order note below. |
-| 4 | [Open phase detection for power transformers using VT triggered optical CTs and IEC 61850-9.2LE compliant relays](https://wprcarchives.org/wp-content/uploads/2024/04/Blake_Jim_OPEN-PHASE-DETECTION-FOR-POWER-TRANSFORMERS-USING-VT-TRIGGERED-OPTICAL-CTS-AND-IEC-61850-9.2LE-COMPLIANT-RELAYS_2016.pdf) | **Link only** | Public WPRC PDF; no explicit redistribution license located. |
-| 5 | [Methods and systems for open-phase detection in power transformers](https://patentimages.storage.googleapis.com/27/05/3e/7936d1193a5348/US10802084.pdf) | **PDF may be committed** | USPTO states patent text/drawings are typically not subject to copyright restrictions, subject to limited exceptions. |
-| 6 | [Residual current-based method for open phase detection in radial and multi-source power systems](https://doi.org/10.1016/j.ijepes.2019.105610) | **Link only** | Publisher-controlled journal article; no open redistribution license located. |
-| 7 | [A three-phase comprehensive methodology to analyze short circuits, open circuits and internal faults of transformers based on the compensation theorem](https://doi.org/10.1016/j.ijepes.2017.09.039) | **Link only** | Publisher-controlled journal article; no open redistribution license located. |
-| 8 | [Alternative approaches and dynamic analysis considerations for detecting open phase conductors in three phase power systems](https://doi.org/10.1016/j.epsr.2018.05.012) | **Link only** | Publisher-controlled journal article; no open redistribution license located. |
-| 9 | [Matrix representation of three-phase N-winding transformers for steady-state and transient studies](https://doi.org/10.1109/TPAS.1982.317184) | **Link only** | An author-uploaded copy is publicly viewable, but it is marked as potentially subject to copyright. |
-| 10 | [Symmetrical Components for Power Systems Engineering](https://www.routledge.com/Symmetrical-Components-for-Power-Systems-Engineering/author/p/book/9780824787677) | **Link only** | Copyrighted CRC Press book. |
-| 11 | [Industrial Power Distribution](https://doi.org/10.1002/9781119065180) | **Link only** | Wiley/IEEE copyrighted book; publisher states all rights reserved. |
-| 12 | [Method of symmetrical co-ordinates applied to the solution of polyphase networks](https://zenodo.org/records/1557391) | **PDF may be committed** | 1918 U.S. publication is public domain in the United States; Zenodo hosts a full scan. |
-| 13 | [BCTRAN Transformer Data Calculation Function](https://www.emtp.com/documents/EMTP-Documentation/doc/transformers/bctran/bctran.pdf) | **Link only** | Freely accessible vendor documentation; no explicit redistribution license located. |
+| Ref. | Full citation | PDF in repository? | Reason |
+|---:|---|:---:|---|
+| **[1]** | U.S. Nuclear Regulatory Commission, “[Design Vulnerability in Electric Power System](https://www.nrc.gov/docs/ML1204/ML120480170.pdf),” Information Notice 2012-03, Mar. 1, 2012, ADAMS Accession No. ML120480170. | ✅ [PDF](./1%20-%20Design%20Vulnerability%20in%20Electric%20Power%20System.pdf) | U.S. Government work; retained locally with source credit. |
+| **[2]** | IEEE Power System Relaying and Control Committee, “[Methods for Analyzing and Detecting an Open Phase Condition of a Power Circuit to a Nuclear Plant Station Service or Startup Transformer](https://www.pes-psrc.org/kb/report/023.pdf),” Working Group Report, 2020. | — | Publicly accessible report, but no explicit redistribution license was located. |
+| **[3]** | D. Cox, A. Abd-Elkader, and H. Chaluvadi, “[Open-Phase Detection for Station Auxiliary Transformers](https://wprcarchives.org/wp-content/uploads/2024/04/Elkader_Ahmed_Open-Phase-Detection-for-Station-Auxiliary-Transformers_20181016.pdf),” in *Proc. 45th Annual Western Protective Relay Conf.*, 2018. | — | Public WPRC PDF, but no explicit redistribution license was located. |
+| **[4]** | J. Blake, A. Rose, A. Baker, E. Hadley, C. Vo, M. Putt, D. Stewart, J. Schaefer, and A. Ishola-Salawu, “[OPEN phase detection for power transformers using VT triggered optical CTs and IEC 61850-9.2LE compliant relays](https://doi.org/10.1109/CPRE.2017.8090042),” in *Proc. 70th Annu. Conf. Protective Relay Engineers (CPRE)*, 2017, pp. 1–5, doi: 10.1109/CPRE.2017.8090042. | — | IEEE conference paper; no open redistribution license was located. |
+| **[5]** | J. Blake, “[Methods and systems for open-phase detection in power transformers](https://patentimages.storage.googleapis.com/27/05/3e/7936d1193a5348/US10802084.pdf),” U.S. Patent 10,802,084 B2, Oct. 13, 2020. | ✅ [PDF](./5%20-%20Methods%20and%20systems%20for%20open-phase%20detection%20in%20power%20transformers.pdf) | U.S. patent text and drawings are generally not subject to copyright restrictions, subject to limited exceptions. |
+| **[6]** | A. C. Adewole, A. Rajapakse, D. Ouellette, and P. Forsyth, “[Residual current-based method for open phase detection in radial and multi-source power systems](https://doi.org/10.1016/j.ijepes.2019.105610),” *Int. J. Electr. Power Energy Syst.*, vol. 117, Art. no. 105610, May 2020, doi: 10.1016/j.ijepes.2019.105610. | — | Publisher-controlled journal article; no open redistribution license was located. |
+| **[7]** | A. Eslami, “[A three-phase comprehensive methodology to analyze short circuits, open circuits and internal faults of transformers based on the compensation theorem](https://doi.org/10.1016/j.ijepes.2017.09.039),” *Int. J. Electr. Power Energy Syst.*, vol. 96, pp. 238–252, Mar. 2018, doi: 10.1016/j.ijepes.2017.09.039. | — | Publisher-controlled journal article; no open redistribution license was located. |
+| **[8]** | R. M. Carritte, K. Cheung, and M. Malik, “[Alternative approaches and dynamic analysis considerations for detecting open phase conductors in three phase power systems](https://doi.org/10.1016/j.epsr.2018.05.012),” *Electr. Power Syst. Res.*, vol. 163, pp. 59–65, Oct. 2018, doi: 10.1016/j.epsr.2018.05.012. | — | Publisher-controlled journal article; no open redistribution license was located. |
+| **[9]** | V. Brandwajn, H. W. Dommel, and I. I. Dommel, “[Matrix representation of three-phase N-winding transformers for steady-state and transient studies](https://doi.org/10.1109/TPAS.1982.317184),” *IEEE Trans. Power App. Syst.*, vol. PAS-101, no. 6, pp. 1369–1378, Jun. 1982, doi: 10.1109/TPAS.1982.317184. | — | IEEE journal article; no open redistribution license was located. |
+| **[10]** | J. L. Blackburn, [*Symmetrical Components for Power Systems Engineering*](https://www.routledge.com/Symmetrical-Components-for-Power-Systems-Engineering/Blackburn/p/book/9780824787677). Boca Raton, FL, USA: CRC Press, 1993. | — | Copyrighted CRC Press book. |
+| **[11]** | R. E. Fehr III, [*Industrial Power Distribution*, 2nd ed.](https://doi.org/10.1002/9781119065180) Hoboken, NJ, USA: Wiley-IEEE Press, 2015, doi: 10.1002/9781119065180. | — | Copyrighted Wiley-IEEE Press book. |
+| **[12]** | C. L. Fortescue, “[Method of symmetrical co-ordinates applied to the solution of polyphase networks](https://doi.org/10.1109/T-AIEE.1918.4765570),” *Trans. AIEE*, vol. 37, no. 2, pp. 1027–1140, 1918, doi: 10.1109/T-AIEE.1918.4765570. | ✅ [PDF](./12%20-%20Method%20of%20symmetrical%20co-ordinates%20applied%20to%20the%20solution%20of%20polyphase%20networks.pdf) | 1918 U.S. publication; public domain in the United States. |
+| **[13]** | EMTP, “[BCTRAN Transformer Data Calculation Function](https://www.emtp.com/documents/EMTP-Documentation/doc/transformers/bctran/bctran.pdf),” EMTP-EMTPWorks transformer documentation, 2005. | — | Freely accessible vendor documentation, but no explicit redistribution license was located. |
 
-## Citation checks discovered while matching sources
+## Notes
 
-- **[3] Cox / Abd-Elkader / Chaluvadi:** the WPRC paper title page presents **Dwayne Cox first**, followed by **Ahmed Abd-Elkader and Harish Chaluvadi**. Version 0.96 currently gives `A. Abd-Elkader, D. Cox, and H. Chaluvadi`. This looks like an author-order correction worth making in the manuscript.
-- **[12] Fortescue:** two bibliographic records circulate for the 1918 work. The Zenodo scan metadata points to the *Proceedings AIEE* DOI `10.1109/PAIEE.1918.6594104` (different pagination), while the *Transactions AIEE* version matching your cited pp. 1027–1140 is commonly indexed as `10.1109/T-AIEE.1918.4765570`. Do not add the Zenodo DOI blindly to the current Transactions citation.
-- **[4] Blake et al.:** an IEEE CPRE 2017 version with the same title also exists. Your bibliography explicitly cites the 2016 WPRC version, so this archive links to the WPRC paper rather than silently substituting the 2017 conference publication.
-
-## Bibliographic entries in version 0.96
-
-### [1] Design Vulnerability in Electric Power System
-
-U.S. Nuclear Regulatory Commission, “Design Vulnerability in Electric Power System,” Information Notice 2012-03, Mar. 1, 2012, ADAMS Accession No. ML120480170.
-
-### [2] Methods for Analyzing and Detecting an Open Phase Condition of a Power Circuit to a Nuclear Plant Station Service or Startup Transformer
-
-IEEE Power System Relaying and Control Committee, “Methods for Analyzing and Detecting an Open Phase Condition of a Power Circuit to a Nuclear Plant Station Service or Startup Transformer,” Working Group Report, 2020.
-
-### [3] Open-Phase Detection for Station Auxiliary Transformers
-
-A. Abd-Elkader, D. Cox, and H. Chaluvadi, “Open-Phase Detection for Station Auxiliary Transformers,” in Proc. 45th Annual Western Protective Relay Conf., 2018.
-
-### [4] Open phase detection for power transformers using VT triggered optical CTs and IEC 61850-9.2LE compliant relays
-
-J. Blake, E. Hadley, D. Stewart, A. Rose, C. Vo, J. Schaefer, A. Baker, M. Putt, and A. Ishola-Salawu, “Open phase detection for power transformers using VT triggered optical CTs and IEC 61850-9.2LE compliant relays,” in Proc. Western Protective Relay Conf., 2016.
-
-### [5] Methods and systems for open-phase detection in power transformers
-
-J. Blake, “Methods and systems for open-phase detection in power transformers,” U.S. Patent 10,802,084 B2, Oct. 13, 2020.
-
-### [6] Residual current-based method for open phase detection in radial and multi-source power systems
-
-A. C. Adewole, A. Rajapakse, D. Ouellette, and P. Forsyth, “Residual current-based method for open phase detection in radial and multi-source power systems,” Int. J. Electr. Power Energy Syst., vol. 117, Art. no. 105610, May 2020, doi: 10.1016/j.ijepes.2019.105610.
-
-### [7] A three-phase comprehensive methodology to analyze short circuits, open circuits and internal faults of transformers based on the compensation theorem
-
-A. Eslami, “A three-phase comprehensive methodology to analyze short circuits, open circuits and internal faults of transformers based on the compensation theorem,” Int. J. Electr. Power Energy Syst., vol. 96, pp. 238–252, Mar. 2018, doi: 10.1016/j.ijepes.2017.09.039.
-
-### [8] Alternative approaches and dynamic analysis considerations for detecting open phase conductors in three phase power systems
-
-R. M. Carritte, K. Cheung, and M. Malik, “Alternative approaches and dynamic analysis considerations for detecting open phase conductors in three phase power systems,” Electr. Power Syst. Res., vol. 163, pp. 59–65, Oct. 2018, doi: 10.1016/j.epsr.2018.05.012.
-
-### [9] Matrix representation of three-phase N-winding transformers for steady-state and transient studies
-
-V. Brandwajn, H. W. Dommel, and I. I. Dommel, “Matrix representation of three-phase N-winding transformers for steady-state and transient studies,” IEEE Trans. Power App. Syst., vol. PAS-101, no. 6, pp. 1369–1378, Jun. 1982, doi: 10.1109/TPAS.1982.317184.
-
-### [10] Symmetrical Components for Power Systems Engineering
-
-J. L. Blackburn, Symmetrical Components for Power Systems Engineering. Boca Raton, FL, USA: CRC Press, 1993.
-
-### [11] Industrial Power Distribution
-
-R. E. Fehr III, Industrial Power Distribution, 2nd ed. Hoboken, NJ, USA: Wiley-IEEE Press, 2015, doi: 10.1002/9781119065180.
-
-### [12] Method of symmetrical co-ordinates applied to the solution of polyphase networks
-
-C. L. Fortescue, “Method of symmetrical co-ordinates applied to the solution of polyphase networks,” Trans. AIEE, vol. 37, no. 2, pp. 1027–1140, 1918.
-
-### [13] BCTRAN Transformer Data Calculation Function
-
-EMTP, “BCTRAN Transformer Data Calculation Function,” EMTP-EMTPWorks transformer documentation, 2005.
+- Reference numbering and citation text match **Rev 0** of the manuscript.
+- Local PDFs are included only where redistribution appears appropriate.
+- For references not stored locally, the citation title links to the publisher, conference archive, agency, DOI, patent record, or vendor source used for the manuscript.
