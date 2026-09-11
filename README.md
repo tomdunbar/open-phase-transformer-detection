@@ -1,114 +1,112 @@
 # Open-Phase Transformer Detection
 
-Supporting software and reproducibility materials for research on model-informed open-phase detection in unloaded three-phase transformers.
+Companion software, numerical inputs, and reference material for the manuscript:
 
-The central research manuscript is ***Model-Informed Open-Phase Detection of Unloaded Transformers***. This repository is intended to make the numerical examples and detection calculations in that work easy to inspect and reproduce.
+**Tom Dunbar, _Model-Informed Phasor-Signature Matching for Detection and Classification of Open-Phase Conditions on Unloaded Transformers_, Rev 0.**
 
-## Project status
+Rev 0 is frozen for peer review. The manuscript stands on its own; this repository provides the code and numerical inputs used to calculate the published field-test example and the finite-\(r\) sensitivity analysis noted in the paper.
 
-This repository is under active development. The associated manuscript is being prepared for peer review.
-
-The transformer modeling companion and the engineering critique of the reference-fingerprint method are separate supporting works. Their permanent Zenodo citations will be added here when those works are published.
-
-Only the journal manuscript is intended for formal peer review. The companion and critique should be cited as independently published technical works.
+The manuscript itself is not maintained in this repository. A public preprint or publication link will be added here when available.
 
 ## Repository contents
 
-```text
-open-phase-transformer-detection/
-├── README.md
-├── CITATION.cff
-├── LICENSE
-├── .gitignore
-├── requirements.txt
-├── src/
-│   └── README.md
-├── examples/
-│   └── README.md
-├── data/
-│   └── README.md
-└── docs/
-    └── README.md
-```
+| Path | Contents |
+|---|---|
+| [`src/`](src/) | Reusable numerical functions for the open-phase hypothesis operators and phase-aligned residual calculations. |
+| [`examples/`](examples/) | Executable reproductions of the Rev 0 field-test example and finite-\(r\) sensitivity analysis. |
+| [`data/`](data/) | Numerical inputs for the field-test example, with provenance notes. |
+| [`references/`](references/) | Rev 0 reference list, source links, and redistributable reference PDFs. |
+| [`docs/`](docs/) | Links and notes for associated scholarly documents. |
+| [`requirements.txt`](requirements.txt) | Python package requirements. |
+| [`CITATION.cff`](CITATION.cff) | Citation metadata for this software repository. |
+| [`LICENSE`](LICENSE) | MIT License for the repository software. |
 
-As the implementation is completed:
+## Reproducing the Rev 0 calculations
 
-* `src/` will contain the reusable open-phase detection calculations.
-* `examples/` will contain executable reproductions of numerical examples from the paper.
-* `data/` will contain the numerical inputs needed for those examples, together with provenance notes.
-* `docs/` will contain links and citation information for the associated manuscript, transformer companion, and fingerprint-method critique.
+The examples are intended to stay close to the equations and numerical values in the manuscript rather than form a general protection-software package.
 
-## Associated research outputs
-
-| Work                                                               | Role                                      | Permanent link                                        |
-| ------------------------------------------------------------------ | ----------------------------------------- | ----------------------------------------------------- |
-| *Model-Informed Open-Phase Detection of Unloaded Transformers*     | Primary research paper                    | To be added                                           |
-| Transformer sequence-component companion                           | Supporting transformer-modeling reference | Zenodo DOI to be added                                |
-| Engineering critique of reference-fingerprint open-phase detection | Supporting technical analysis             | Zenodo DOI to be added                                |
-| Open-phase detection reproducibility software                      | Code associated with the research paper   | Zenodo DOI to be added after the first GitHub release |
-
-## Reproducing the field-test example
-
-The goal of the first software release is that a reader can reproduce the field-test calculation reported in the paper with a single example script.
-
-The intended workflow will be:
+From the repository root, create an environment if desired and install the required packages:
 
 ```bash
 python -m venv .venv
 ```
 
-Activate the virtual environment, then install the required packages:
+Activate the environment, then run:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Run the field-test example:
+### Field-test proof of concept
 
 ```bash
 python examples/field_test_example.py
 ```
 
-The example will report the predicted current vectors, residual for each open-phase hypothesis, winning hypothesis, and margin to the nearest competing hypothesis.
+This script:
 
-Exact commands and expected numerical results will be updated when the implementation is frozen for the manuscript.
+- loads the healthy and measured field-test phasors from `data/field_test_phasors.csv`;
+- constructs the parameter-free large-\(|r|\) hypothesis bank using \(q=-1\);
+- predicts the healthy and Phase-A-, Phase-B-, and Phase-C-open current vectors;
+- removes arbitrary common phasor rotation using the closed-form minimal residual;
+- treats the measured Phase-C angle as unknown; and
+- evaluates the exact most favorable residual for each hypothesis.
 
-## Method scope
+The Rev 0 minimum residuals are:
 
-The implementation is intended as a transparent research and reproducibility reference, not as protection or control software.
+| Hypothesis | Minimum residual (A) |
+|---|---:|
+| Healthy | 1.203 |
+| Phase A open | 2.019 |
+| Phase B open | 1.447 |
+| Phase C open | 0.178 |
 
-The initial implementation focuses on unloaded transformers and the model-informed hypothesis-bank approach developed in the associated paper. Assumptions, transformer-model approximations, and applicability limits are documented in the paper and supporting transformer companion.
+The Phase-C-open hypothesis is therefore the best match, with a minimum margin of approximately **1.025 A** to the closest competing hypothesis.
 
-## Citation
+The script contains assertions against the manuscript values and reports `PASS` when they are reproduced.
 
-Citation metadata for this repository is provided in [`CITATION.cff`](CITATION.cff).
+### Finite-\(r\) sensitivity analysis
 
-After the first archival software release, this section will provide the Zenodo DOI for the exact version accompanying the submitted manuscript.
+```bash
+python examples/finite_r_sensitivity.py
+```
 
-Readers should cite the research paper for the detection methodology and cite the archived software release when referring specifically to the implementation or reproduced calculations.
+This script keeps the measured field-test current fixed while replacing the large-\(|r|\) approximation with finite positive-real values of \(r\). For each case it uses
 
-## Supporting technical works
+\[
+q(r)=\frac{1-r}{r+2}
+\]
 
-### Transformer sequence-component companion
+to reconstruct the hypothesis bank and recompute the residuals.
 
-A senior-undergraduate-level companion develops the transformer sequence-component models used to estimate the effective positive- and zero-sequence excitation impedances required by the detection method.
+The calculation is a sensitivity check on the large-\(|r|\) approximation used in Rev 0. It is **not** an independent validation of the transformer model.
 
-**Citation:** to be added when the Zenodo record is published.
-
-### Engineering critique of the reference-fingerprint method
-
-A separate technical report examines conceptual, mathematical, and practical limitations of the previously published reference-fingerprint open-phase detection approach.
-
-**Citation:** to be added when the Zenodo record is published.
+See [`examples/README.md`](examples/README.md) for additional details.
 
 ## Data provenance
 
-Any numerical values reconstructed from previously published figures or other third-party sources will be identified in `data/README.md` and in the associated paper.
+The field-test example is reconstructed from previously published open-phase test information. The numerical inputs and their provenance are documented in [`data/README.md`](data/README.md).
 
-Licensing statements in this repository apply only to material for which the repository author holds the relevant rights; they do not alter the rights or licenses of cited third-party source material.
+The healthy and measured states use independent arbitrary angular references because the detector removes common phasor rotation before comparing the vectors. The measured Phase-C-open current magnitude is known, but its angle is treated as indeterminate, consistent with the source material.
 
-## License
+See [`references/README.md`](references/README.md) for the complete Rev 0 bibliography and source links.
 
-The software in this repository is released under the **MIT License**. See [`LICENSE`](LICENSE).
+## Scope
 
-The separately published transformer companion and fingerprint-method critique are intended to be released under the **Creative Commons Attribution 4.0 International (CC BY 4.0)** license through their respective Zenodo records.
+This repository implements the model-informed open-phase detection calculations developed for an **energized, unloaded transformer with a single open source conductor and no simultaneous phase-to-ground fault**.
+
+It is a transparent research implementation, not production protection or control software.
+
+The analytical and practical limitations of the method—including transformer-model approximations, source and grounding variation, loading, capacitance, sensor error, and the need for broader validation—are discussed in the manuscript.
+
+## Citation
+
+If you use the detection methodology, please cite the associated research paper once a public citation is available.
+
+If you use or adapt the software in this repository, citation metadata are provided in [`CITATION.cff`](CITATION.cff).
+
+## License and third-party material
+
+The software in this repository is released under the [MIT License](LICENSE).
+
+That license applies only to material for which the repository author holds the relevant rights. It does not relicense third-party publications, figures, or other source material. The [`references/`](references/) directory includes local copies only where redistribution appears appropriate; otherwise it provides links to the original source.
