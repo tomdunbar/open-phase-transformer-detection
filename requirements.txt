@@ -1,5 +1,2 @@
-# Python dependencies for the reproducibility scripts will be pinned
-# before the v1.0.0 software release.
-#
-# Expected core dependency:
+# Runtime dependency for the Rev 0 companion scripts.
 numpy
