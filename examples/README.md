@@ -36,7 +36,7 @@ The Phase-C-open hypothesis is therefore the best match, with a minimum margin o
 
 The script contains numerical assertions against these Rev 0 values and reports `PASS` when they are reproduced.
 
-### Why no numerical angle sweep is required
+### Most Favorable Phase C angle
 
 For an unknown measured Phase-C angle, the complex inner product can be written schematically as
 

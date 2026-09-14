@@ -1,10 +1,15 @@
-# Open-Phase Transformer Detection
-
-Companion software, numerical inputs, and reference material for the manuscript:
+# Open-Phase Transformer Detection Repository
+This repository is a companion to the paper:
 
 **Tom Dunbar, _Model-Informed Phasor-Signature Matching for Detection and Classification of Open-Phase Conditions on Unloaded Transformers_, Rev 0.**
 
-Rev 0 is frozen for peer review. The manuscript stands on its own; this repository contains the code and numerical inputs used to calculate the field-test example and finite-$r$ sensitivity analysis noted in the paper.
+Rev 0 of paper has been submitted to IEEE Transactions on Power Delivery for peer review.  
+
+## Scope
+The materials in this repository such as code, numerical inputs, sensitivity analysis, and related reference material are seperate from the paper. The paper stands on its own.
+This repository is only intened to ease review and implementation of the paper.
+
+The code in this repository is a transparent research implementation. It is not intenteded as protection or control system software.
 
 The manuscript itself is not maintained in this repository. A public preprint or publication link will be added here when available.
 
@@ -16,18 +21,12 @@ The manuscript itself is not maintained in this repository. A public preprint or
 | [`examples/`](examples/) | Executable Rev 0 field-test and finite-$r$ sensitivity calculations. |
 | [`data/`](data/) | Numerical inputs for the field-test example, with provenance notes. |
 | [`references/`](references/) | Rev 0 reference list, source links, and redistributable reference PDFs. |
-| [`docs/`](docs/) | Related scholarly documents. |
 | [`requirements.txt`](requirements.txt) | Python runtime dependency information. |
 | [`CITATION.cff`](CITATION.cff) | Citation metadata for this software repository. |
 | [`LICENSE`](LICENSE) | MIT License for the repository software. |
 
-## Reproducing the Rev 0 calculations
 
-The examples are intentionally kept close to the equations and numerical values in the manuscript rather than developed as a general protection-software package.
-
-numpy is required to run the scripts.
-
-### Field-test proof of concept
+## Field-test Proof of Concept Script
 
 ```bash
 python examples/field_test_example.py
@@ -42,20 +41,11 @@ This script:
 - treats the measured Phase-C angle as unknown; and
 - evaluates the exact most favorable residual for each hypothesis.
 
-The Rev 0 minimum residuals are:
-
-| Hypothesis | Minimum residual (A) |
-|---|---:|
-| Healthy | 1.203 |
-| Phase A open | 2.019 |
-| Phase B open | 1.447 |
-| Phase C open | 0.178 |
-
-The Phase-C-open hypothesis is the best match, with a minimum margin of approximately **1.025 A** to the closest competing hypothesis.
-
 The script contains assertions against the Rev 0 values and reports `PASS` when they are reproduced.
 
-### Finite-$r$ sensitivity analysis
+See [`examples/README.md`](examples/README.md) for additional details.
+
+## Finite-$r$ Sensitivity Analysis Script
 
 ```bash
 python examples/finite_r_sensitivity.py
@@ -69,33 +59,37 @@ $$
 
 to reconstruct the hypothesis bank and recompute the residuals.
 
-The calculation is a sensitivity check on the large-$|r|$ approximation used in Rev 0. It is **not** an independent validation of the transformer model.
+The calculation is a sensitivity check on the large-$|r|$ approximation used in Rev 0.
 
 See [`examples/README.md`](examples/README.md) for additional details.
 
-## Data provenance
+## Data
 
 The field-test example is reconstructed from previously published open-phase test information. The numerical inputs and their provenance are documented in [`data/README.md`](data/README.md).
 
-The healthy and measured states use independent arbitrary angular references because the detector removes common phasor rotation before comparing the vectors. The measured Phase-C-open current magnitude is known, but its angle is treated as indeterminate, consistent with the source material.
+The healthy and measured states use independent arbitrary angular references. The measured Phase-C-open current magnitude is known, but its angle is treated as indeterminate, consistent with the source material.
 
-See [`references/README.md`](references/README.md) for the complete Rev 0 bibliography and source links.
+## References
+For the complete Rev 0 bibliography and source links, see [`references/README.md`](../references/README.md).
 
-## Scope
+# Related Documents
+The broader open-phase project also includes separate supporting documents:
 
-This repository implements the model-informed open-phase detection calculations developed for an **energized, unloaded transformer with a single open source conductor and no simultaneous phase-to-ground fault**.
+- **Transformer sequence-component companion**  
+   Supporting technical material on transformer sequence models and estimation of the effective zero-/positive-sequence input relationship used by the detection method. A public link will be added when available.
 
-It is a transparent research implementation, not production protection or control software.
+- **Engineering critique of reference-fingerprint open-phase detection**  
+   Separate technical analysis of reference-current/fingerprint-based open-phase detection. A public link will be added when available.
 
-The analytical and practical limitations of the method—including transformer-model approximations, source and grounding variation, loading, capacitance, sensor error, and the need for broader validation—are discussed in the manuscript.
+These documents are intentionally maintained as separate scholarly works. This repository does not depend on the companion or critique documents.
 
-## Citation
+# Citation
 
 If you use the detection methodology, please cite the associated research paper once a public citation is available.
 
 If you use or adapt the software in this repository, citation metadata are provided in [`CITATION.cff`](CITATION.cff).
 
-## License and third-party material
+# License and third-party material
 
 The software in this repository is released under the [MIT License](LICENSE).
 
