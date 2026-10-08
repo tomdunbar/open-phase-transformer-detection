@@ -3,7 +3,7 @@ This repository is a companion to the paper:
 
 **Tom Dunbar, _Model-Informed Phasor-Signature Matching for Detection and Classification of Open-Phase Conditions on Unloaded Transformers_, Rev 0.**
 
-Rev 0 of paper has been submitted to IEEE Transactions on Power Delivery for peer review.  
+Rev 0 of paper is being submitted for peer review.  
 
 ## Scope
 The materials in this repository such as code, numerical inputs, sensitivity analysis, and related reference material are seperate from the paper. The paper stands on its own.
