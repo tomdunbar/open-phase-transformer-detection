@@ -19,12 +19,10 @@ The repository license does **not** relicense third-party references. A document
 | **[11]** | V. Brandwajn, H. W. Dommel, and I. I. Dommel, “[Matrix representation of three-phase N-winding transformers for steady-state and transient studies](https://doi.org/10.1109/TPAS.1982.317184),” *IEEE Trans. Power App. Syst.*, vol. PAS-101, no. 6, pp. 1369–1378, Jun. 1982, doi: 10.1109/TPAS.1982.317184. | — | IEEE journal article; no open redistribution license identified. |
 | **[12]** | J. L. Blackburn, [*Symmetrical Components for Power Systems Engineering*](https://www.routledge.com/Symmetrical-Components-for-Power-Systems-Engineering/Blackburn/p/book/9780824787677). Boca Raton, FL, USA: CRC Press, 1993. | — | Copyrighted CRC Press book. |
 | **[13]** | R. E. Fehr III, [*Industrial Power Distribution*, 2nd ed.](https://doi.org/10.1002/9781119065180) Hoboken, NJ, USA: Wiley-IEEE Press, 2015, doi: 10.1002/9781119065180. | — | Copyrighted Wiley-IEEE Press book. |
-| **[14]** | C. L. Fortescue, “[Method of symmetrical co-ordinates applied to the solution of polyphase networks](https://doi.org/10.1109/T-AIEE.1918.4765570),” *Trans. AIEE*, vol. 37, no. 2, pp. 1027–1140, 1918, doi: 10.1109/T-AIEE.1918.4765570. | ✅ [PDF](./12%20-%20Method%20of%20symmetrical%20co-ordinates%20applied%20to%20the%20solution%20of%20polyphase%20networks.pdf) | 1918 U.S. publication; public domain in the United States. |
+| **[14]** | C. L. Fortescue, “[Method of symmetrical co-ordinates applied to the solution of polyphase networks](https://doi.org/10.1109/T-AIEE.1918.4765570),” *Trans. AIEE*, vol. 37, no. 2, pp. 1027–1140, 1918, doi: 10.1109/T-AIEE.1918.4765570. | ✅ [PDF](./14%20-%20Method%20of%20symmetrical%20co-ordinates%20applied%20to%20the%20solution%20of%20polyphase%20networks.pdf) | 1918 U.S. publication; public domain in the United States. |
 | **[15]** | EMTP, “[BCTRAN Transformer Data Calculation Function](https://www.emtp.com/documents/EMTP-Documentation/doc/transformers/bctran/bctran.pdf),” EMTP-EMTPWorks transformer documentation, 2005. | — | Freely accessible vendor documentation; no explicit redistribution license identified. |
 
 ## Notes
 
 - Reference numbering and citation details follow the October 2026 manuscript revision.
-- Relative PDF links point to files **actually present** in this directory. Some local PDF filenames retain their numbers from an earlier revision; in particular, the Fortescue PDF filename begins with `12 -` although it is now reference **[14]**. The files were not renamed.
-- The prior revision's Eslami (2018) reference is not cited in the current manuscript and is therefore not in this list.
 - Source hyperlinks are provided for citations without local PDFs; a link does not imply permission to redistribute the linked work.
