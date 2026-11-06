@@ -75,8 +75,14 @@ For the complete Rev 0 bibliography and source links, see [`references/README.md
 # Related Documents
 The broader open-phase project also includes separate supporting documents:
 
-- **Transformer sequence-component companion**  
+- **Transformer sequence-component modeling**  
    Supporting technical material on transformer sequence models and estimation of the effective zero-/positive-sequence input relationship used by the detection method. A public link will be added when available.
+
+- **Solving Open Phase Faults on Unloaded Transfomers**  
+   Supporting technical material on solutions to sequence models for open phase conditions on unloaded transformers. Uses the effective zero-/positive-sequence input relationship to simplify the solutions. A public link will be added when available.
+
+- **General analysis of Unbalanced faults**  
+   A new technique for general analysis of unbalanced faults that is faster and less error prone than traditional methods. A public link will be added when available.
 
 - **Engineering critique of reference-fingerprint open-phase detection**  
    Separate technical analysis of reference-current/fingerprint-based open-phase detection. A public link will be added when available.
